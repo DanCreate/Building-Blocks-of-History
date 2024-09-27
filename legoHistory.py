@@ -11,6 +11,11 @@ sets = pd.read_csv("D:\\Downloads\\noBorrar\\sets.csv")
 num_colors = colors['name'].count()
 print(f"Count of colors: {num_colors}")
 
+plt.text(0.5, 0.5, f"Total Colors: {num_colors}",
+         fontsize=20, ha='center', va='center')
+plt.axis('off')
+plt.show()
+
 # Count number of colors grouped by 'is_trans'
 colors_summary = colors.groupby('is_trans').size()
 print(colors_summary)
